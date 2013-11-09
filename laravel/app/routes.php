@@ -13,5 +13,10 @@
 
 Route::get('/', function()
 {
-	return View::make('layouts.master');
+	return View::make('layouts.login');
+});
+
+Route::get('/register/', function()
+{
+	return "Register Page test";
 });
