@@ -4,7 +4,7 @@
 
 	@section('body')
 		<div class="register">
-			{{{ $errors }}}
+			{{ $errors }}
 			<form action="" method="POST">
 				First Name: <input type="text" id="fname" name="fname" /><br />
 				Last Name: <input type="text" id="lname" name="lname" /><br />
