@@ -24,13 +24,13 @@ class RegisterController extends BaseController{
 		$validator = Validator::make(Input::all(), $rules);
 		if($validator->passes()){
 			$user user = new User;
-			user->fname = Input::get('fname');
-			user->lname = Input::get('lname');
-			user->username = Input::get('username');
-			user->kaccount = Input::get('kaccount');
-			user->email = Input::get('email');
-			user->cwid = Input::get('cwid');
-			user->password = Input::get('password');
+			$user->fname = Input::get('fname');
+			$user->lname = Input::get('lname');
+			$user->username = Input::get('username');
+			$user->kaccount = Input::get('kaccount');
+			$user->email = Input::get('email');
+			$user->cwid = Input::get('cwid');
+			$user->password = Input::get('password');
 			Redirect::to('student');
 		}
 		else {
