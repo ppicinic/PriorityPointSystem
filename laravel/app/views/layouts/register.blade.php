@@ -4,7 +4,9 @@
 
 	@section('body')
 		<div class="register">
-			{{ var_dump($errors) }}
+			@foreach($errors as $error)
+				{{ $error }}
+			@endforeach
 			<form action="" method="POST">
 				First Name: <input type="text" id="fname" name="fname" /><br />
 				Last Name: <input type="text" id="lname" name="lname" /><br />
