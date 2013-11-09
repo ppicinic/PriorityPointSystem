@@ -34,7 +34,7 @@ class RegisterController extends BaseController{
 			Redirect::to('student');
 		}
 		else {
-			return Redirect::to('register')->withErrors($validator);
+			Redirect::to('register')->withErrors($validator);
 		}
 	}
 }
