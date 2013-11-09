@@ -1,6 +1,6 @@
 {{-- Login Page on the index
 	also should include a link to Register route --}}
-@extends('layouts.master')
+@extends('master')
 	
 	@section('content')
 		<div class="login">
