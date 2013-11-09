@@ -1,4 +1,4 @@
-@extends('master')
+@extends('layouts.master')
 {{-- Login Page on the index
 	also should include a link to Register route --}}
 	
