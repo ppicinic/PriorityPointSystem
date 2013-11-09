@@ -3,9 +3,8 @@
 class RegisterController extends BaseController{
 	
 	public function register(){
-		return Request::server('REQUEST_METHOD');
 		if(Request::server('REQUEST_METHOD') == 'POST'){
-			$this->registerUser();
+			return $this->registerUser();
 		}else{
 			return View::make('layouts.register');
 		}
@@ -33,10 +32,10 @@ class RegisterController extends BaseController{
 			$user->cwid = Input::get('cwid');
 			$user->password = Input::get('password');
 			$user->save();
-			Redirect::to('student');
+			return Redirect::to('student');
 		}
 		else {
-			Redirect::to('register');
+			return Redirect::to('register');
 		}
 	}
 }
