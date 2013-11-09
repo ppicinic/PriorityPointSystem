@@ -4,10 +4,13 @@
 
 	@section('body')
 		<div class="register">
+			{{ $errors->first('fname') }}
+			{{ $errors->first('lname') }}
+			{{ $errors->first('cwid') }}
+			{{ $errors->first('username') }}
 			{{ $errors->first('email') }}
-			@foreach($errors as $error)
-				{{ $error->first() }}
-			@endforeach
+			{{ $errors->first('kaccount') }}
+			{{ $errors->first('password') }}
 			<form action="" method="POST">
 				First Name: <input type="text" id="fname" name="fname" /><br />
 				Last Name: <input type="text" id="lname" name="lname" /><br />
