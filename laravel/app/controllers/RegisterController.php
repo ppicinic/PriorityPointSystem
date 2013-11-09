@@ -3,7 +3,7 @@
 class RegisterController extends BaseController{
 	
 	public function register(){
-		switch(Request::method()){
+		switch(Request::server('REQUEST_METHOD')){
 			case 'GET':
 				View::make('layouts.register');
 				break;
