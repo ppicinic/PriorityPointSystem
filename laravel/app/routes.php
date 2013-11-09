@@ -18,5 +18,5 @@ Route::get('/', function()
 
 Route::get('/register', function()
 {
-	return View::make('layouts.register');
+	return var_dump(User::all());
 });
