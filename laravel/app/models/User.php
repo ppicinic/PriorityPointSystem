@@ -48,8 +48,4 @@ class User extends Eloquent{
 	public function setPasswordAttribute($value){
 		$this->set_attribute('password', Hash::make($value));
 	}
-	
-	public function setCwidAttribute($value){
-		$this->set_attribute('cwid', intval($value));
-	}
 }
