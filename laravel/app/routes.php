@@ -13,5 +13,5 @@
 
 Route::get('/', function()
 {
-	return "FUCK OFF BITCHES";
+	return View::make('layouts.master');
 });
