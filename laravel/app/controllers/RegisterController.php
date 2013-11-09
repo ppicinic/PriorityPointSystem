@@ -3,15 +3,9 @@
 class RegisterController extends BaseController{
 	
 	public function register(){
-		switch(Request::server('REQUEST_METHOD')){
-			case 'GET':
-				View::make('layouts.register');
-				break;
-			case 'POST':
-				break;
-			default:
-				App::abort(404);
-				break;
+		if(Request::server('REQUEST_METHOD') == 'POST'){
+		}else{
+			View::make('layouts.register');
 		}
 	}
 
