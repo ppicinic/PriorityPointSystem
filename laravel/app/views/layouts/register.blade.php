@@ -6,7 +6,7 @@
 		<div class="register">
 			{{ $errors->first('email') }}
 			@foreach($errors as $error)
-				{{ $error }}
+				{{ $error->first() }}
 			@endforeach
 			<form action="" method="POST">
 				First Name: <input type="text" id="fname" name="fname" /><br />
