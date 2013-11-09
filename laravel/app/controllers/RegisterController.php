@@ -4,7 +4,7 @@ class RegisterController extends BaseController{
 	
 	public function register(){
 		if(Request::server('REQUEST_METHOD') == 'POST'){
-			registerUser();
+			$this->registerUser();
 		}else{
 			return View::make('layouts.register');
 		}
