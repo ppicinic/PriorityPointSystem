@@ -1,4 +1,4 @@
-{{!-- Master Template Layout
+{{-- Master Template Layout
 	Base for all templates --}}
 <!doctype html>
 <html>
