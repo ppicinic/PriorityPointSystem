@@ -4,6 +4,7 @@
 
 	@section('body')
 		<div class="register">
+			{{ $errors->first('email') }}
 			@foreach($errors as $error)
 				{{ $error }}
 			@endforeach
