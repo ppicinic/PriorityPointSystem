@@ -15,6 +15,18 @@
 	<body>
 	
 	@section('body')
+		<nav>
+			@section('nav')
+			@show
+		</nav>
+		<div class="content">
+			@section('content')
+			@show
+		</div>
+		<footer>
+			@section('footer')
+			@show
+		</footer>
 	@show
 
 	</body>

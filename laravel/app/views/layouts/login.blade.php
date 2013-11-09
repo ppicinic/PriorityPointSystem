@@ -4,8 +4,10 @@
 	
 	@section('body')
 		<div class="login">
-		
-			<form action="" method="POST">
+			@foreach($errors->all() as $error)
+				{{$error}}
+			@endforeach
+			<form action="." method="POST">
 				Username: <input type="text" id="username" name="username" /><br />
 				Password: <input type="password" id="password" name="password" /><br/>
 				<input type="submit" id= "login" value="Log In" />

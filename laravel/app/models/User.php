@@ -1,9 +1,6 @@
 <?php
 
-use Illuminate\Auth\UserInterface;
-use Illuminate\Auth\Reminders\RemindableInterface;
-
-class User extends Eloquent implements UserInterface, RemindableInterface {
+class User extends Eloquent{
 
 	/**
 	 * The database table used by the model.
@@ -11,42 +8,50 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 * @var string
 	 */
 	protected $table = 'users';
-
-	/**
-	 * The attributes excluded from the model's JSON form.
-	 *
-	 * @var array
-	 */
+	
+	public $timestamps = false;
+	
 	protected $hidden = array('password');
-
-	/**
-	 * Get the unique identifier for the user.
-	 *
-	 * @return mixed
-	 */
-	public function getAuthIdentifier()
-	{
-		return $this->getKey();
+	
+	public function setFnameAttribute($value){
+		$this->attributes['fname'] = trim(strtolower($value));
 	}
-
-	/**
-	 * Get the password for the user.
-	 *
-	 * @return string
-	 */
-	public function getAuthPassword()
-	{
-		return $this->password;
+	
+	public function setLnameAttribute($value){
+		$this->attributes['lname'] = trim(strtolower($value));
 	}
-
-	/**
-	 * Get the e-mail address where password reminders are sent.
-	 *
-	 * @return string
-	 */
-	public function getReminderEmail()
-	{
-		return $this->email;
+	
+	public function setUsernameAttribute($value){
+		$this->attributes['username'] = trim(strtolower($value));
 	}
-
+	
+	public function setEmailAttribute($value){
+		$this->attributes['email'] = trim(strtolower($value));
+	}
+	
+	public function setKaccountAttribute($value){
+		$this->attributes['kaccount'] = trim(strtolower($value));
+	}
+	
+	public function getFnameAttribute($value){
+		return ucfirst($value);
+	}
+	
+	public function getLnameAttribute($value){
+		return ucfirst($value);
+	}
+	
+	public function getUsernameAttribute($value){
+		return ucfirst($value);
+	}
+	
+	public function setPasswordAttribute($value){
+		$this->attributes['password'] = Hash::make($value);
+	}
+	
+	public function setCwidAttribute($value){
+		$this->attributes['cwid'] = intval($value);
+	}
 }
+
+?>
