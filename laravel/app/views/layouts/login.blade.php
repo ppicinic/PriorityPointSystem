@@ -1,8 +1,8 @@
+@extends('master')
 {{-- Login Page on the index
 	also should include a link to Register route --}}
-@extends('master')
 	
-	@section('content')
+	@section('body')
 		<div class="login">
 		
 			<form action="" method="POST">
