@@ -42,7 +42,7 @@ class RegisterController extends BaseController{
 			return Redirect::to('student');
 		}
 		else {
-			return Redirect::to('register')->withErrors($validator);
+			return Redirect::to('register')->withInput(Input::except('password', 'vpassword'))->withErrors($validator);
 		}
 	}
 }

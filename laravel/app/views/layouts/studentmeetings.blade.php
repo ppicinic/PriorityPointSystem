@@ -23,10 +23,9 @@
 				Type: {{$meeting->typename}}
 				Date: {{ (new DateTime($meeting->date))->format('n/j/Y') }}<br />
 			@endforeach
-		<a href='/students/clubs/{{$club->id}}'>View Meetings</a>
 	@endforeach
 	</p>
-	<form action='../logout' method='POST'>
+	<form action='/logout' method='POST'>
 		<input type='submit' name='submit' value='Log Out'>
 	</form>
 	@stop

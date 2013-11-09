@@ -26,3 +26,7 @@ Route::post('/logout', function(){
 	Session::put('cwid', 0);
 	return Redirect::to('/');
 });
+
+Route::get('/admin', 'AdminController@admin');
+Route::post('/admin/search', 'AdminController@search');
+Route::get('/admin/student/{cwid}', 'AdminController@adminSearch');

@@ -26,7 +26,11 @@ class LoginController extends BaseController{
 				if(Hash::check(Input::get('password'), $user->password)){
 					Session::put('loggedIn', true);
 					Session::put('cwid', $user->cwid);
-					return Redirect::to('/student');
+					if($user->userclass == 1 || $user->userclass == 2){
+						return Redirect::to('/student');
+					}elseif($user->userclass == 3){
+						return Redirect::to('/admin');
+					}
 				} else {
 					$errors = array("Password is incorrect.");
 					return Redirect::to('/')->withErrors($errors);
