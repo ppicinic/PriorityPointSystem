@@ -18,5 +18,5 @@ Route::get('/', function()
 
 Route::get('/register', function()
 {
-	return var_dump(User::all());
+	return User::find(1)->fname;
 });

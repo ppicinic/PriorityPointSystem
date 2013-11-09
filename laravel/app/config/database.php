@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'mcpps',
 			'username'  => 'root',
-			'password'  => 'testserver1',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
