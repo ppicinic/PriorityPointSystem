@@ -11,7 +11,18 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('layouts.master');
+Route::get('/', 'LoginController@login');
+Route::post('/', 'LoginController@loginUser');
+
+Route::get('/register', 'RegisterController@register');
+Route::post('/register', 'RegisterController@registerUser');
+
+Route::get('/student', 'StudentController@student');
+Route::get('/student/clubs', 'StudentController@clubs');
+Route::get('/student/clubs/{id}', 'StudentController@meetings');
+
+Route::post('/logout', function(){
+	Session::put('loggedIn', false);
+	Session::put('cwid', 0);
+	return Redirect::to('/');
 });
