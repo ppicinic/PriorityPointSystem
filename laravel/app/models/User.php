@@ -53,3 +53,5 @@ class User extends Eloquent{
 		$this->attributes['cwid'] = intval($value);
 	}
 }
+
+?>

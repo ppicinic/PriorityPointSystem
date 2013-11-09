@@ -11,9 +11,16 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('layouts.login');
-});
+Route::get('/', 'LoginController@login');
+Route::post('/', 'LoginController@loginUser');
 
-Route::any('/register', 'RegisterController@register');
+Route::get('/register', 'RegisterController@register');
+Route::post('/register', 'RegisterController@registerUser');
+
+Route::get('/student', 'StudentController@student');
+
+Route::post('/logout', function(){
+	Session::put('loggedIn', false);
+	Session::put('cwid', 0);
+	return Redirect::to('/');
+});
