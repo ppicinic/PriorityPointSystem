@@ -16,7 +16,7 @@ Route::get('/', function()
 	return View::make('layouts.login');
 });
 
-Route::get('/register/', function()
+Route::get('/register', function()
 {
 	return "Register Page test";
 });
