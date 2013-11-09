@@ -13,5 +13,10 @@
 
 Route::get('/', function()
 {
-	return "FUCK OFF BITCHES";
+	return View::make('layouts.login');
+});
+
+Route::get('/register', function()
+{
+	return View::make('layouts.register');
 });
