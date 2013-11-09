@@ -16,7 +16,4 @@ Route::get('/', function()
 	return View::make('layouts.login');
 });
 
-Route::get('/register', function()
-{
-	return User::find(1)->fname;
-});
+Route::any('/register', 'RegisterController@register');

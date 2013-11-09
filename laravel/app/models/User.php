@@ -8,4 +8,8 @@ class User extends Eloquent{
 	 * @var string
 	 */
 	protected $table = 'users';
+	
+	protected $timestamps = false;
+	
+	protected $hidden = array('password');
 }
