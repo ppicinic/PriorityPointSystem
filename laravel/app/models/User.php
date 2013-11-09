@@ -9,7 +9,7 @@ class User extends Eloquent{
 	 */
 	protected $table = 'users';
 	
-	protected $timestamps = false;
+	public $timestamps = false;
 	
 	protected $hidden = array('password');
 	
