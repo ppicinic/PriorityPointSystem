@@ -31,6 +31,7 @@ class RegisterController extends BaseController{
 			$user->email = Input::get('email');
 			$user->cwid = Input::get('cwid');
 			$user->password = Input::get('password');
+			$user->save();
 			Redirect::to('student');
 		}
 		else {
