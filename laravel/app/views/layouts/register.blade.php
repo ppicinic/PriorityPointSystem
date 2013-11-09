@@ -8,6 +8,7 @@
 			<form action="" method="POST">
 				First Name: <input type="text" id="fname" name="fname" /><br />
 				Last Name: <input type="text" id="lname" name="lname" /><br />
+				CWID: <input type="text" id="cwid" name="cwid" /><br />
 				Username: <input type="text" id="username" name="username" /><br />
 				Email: <input type="text" id="email" name="email" /><br />
 				K-account: <input type="text" id="kaccount" name="kaccount" /><br />
