@@ -18,6 +18,8 @@ Route::get('/register', 'RegisterController@register');
 Route::post('/register', 'RegisterController@registerUser');
 
 Route::get('/student', 'StudentController@student');
+Route::get('/student/clubs', 'StudentController@clubs');
+Route::get('/student/clubs/{id}', 'StudentController@meetings');
 
 Route::post('/logout', function(){
 	Session::put('loggedIn', false);

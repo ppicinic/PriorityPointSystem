@@ -13,6 +13,26 @@ class User extends Eloquent{
 	
 	protected $hidden = array('password');
 	
+	public function clubs(){
+		return $this->belongsToMany('Club', 'user_club');
+	}
+	
+	public function meetings(){
+		return $this->belongsToMany('Meeting', 'user_meeting');
+	}
+	
+	public function gpas(){
+		return $this->hasMany('Gpa');
+	}
+	
+	public function rooms(){
+		return $this->hasMany('Room');
+	}
+	
+	public function disciplines(){
+		return $this->hasMany('Discipline');
+	}
+	
 	public function setFnameAttribute($value){
 		$this->attributes['fname'] = trim(strtolower($value));
 	}
