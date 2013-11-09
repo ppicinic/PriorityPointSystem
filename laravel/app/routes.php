@@ -18,5 +18,5 @@ Route::get('/', function()
 
 Route::get('/register', function()
 {
-	return "Register Page test";
+	return View::make('layouts.register');
 });
