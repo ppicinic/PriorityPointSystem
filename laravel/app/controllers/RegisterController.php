@@ -22,7 +22,7 @@ class RegisterController extends BaseController{
 		);
 		
 		$validator = Validator::make(Input::all(), $rules);
-		if(validator->passes()){
+		if($validator->passes()){
 			$user user = new User;
 			user->fname = Input::get('fname');
 			user->lname = Input::get('lname');
