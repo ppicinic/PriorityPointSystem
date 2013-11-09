@@ -17,7 +17,7 @@ class RegisterController extends BaseController{
 			'email' => 'required|email|max:100',
 			'username' => 'min:1|max:70',
 			'kaccount' => 'between:5,5',
-			'cwid' => 'required|between:8,8|regex:[0-9]',
+			'cwid' => 'required|between:8,8|regex:\d{8}',
 			'password' => 'required|between:6,22|same:vpassword'
 		);
 		
