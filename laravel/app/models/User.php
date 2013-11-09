@@ -14,23 +14,23 @@ class User extends Eloquent{
 	protected $hidden = array('password');
 	
 	public function setFnameAttribute($value){
-		$this->set_attribute('fname', trim(strtolower($value)));
+		$this->attributes['fname'] = trim(strtolower($value)));
 	}
 	
 	public function setLnameAttribute($value){
-		$this->set_attribute('lname', trim(strtolower($value)));
+		$this->attributes['lname'] = trim(strtolower($value)));
 	}
 	
 	public function setUsernameAttribute($value){
-		$this->set_attribute('username', trim(strtolower($value)));
+		$this->attributes['username'] = trim(strtolower($value)));
 	}
 	
 	public function setEmailAttribute($value){
-		$this->set_attribute('email', trim(strtolower($value)));
+		$this->attributes['email'] = trim(strtolower($value)));
 	}
 	
 	public function setKaccountAttribute($value){
-		$this->set_attribute('kaccount', trim(strtolower($value)));
+		$this->attributes['kaccount'] = trim(strtolower($value)));
 	}
 	
 	public function getFnameAttribute($value){
@@ -46,10 +46,10 @@ class User extends Eloquent{
 	}
 	
 	public function setPasswordAttribute($value){
-		$this->set_attribute('password', Hash::make($value));
+		$this->attributes['password'] = Hash::make($value));
 	}
 	
 	public function setCwidAttribute($value){
-		$this->set_attribute('cwid', intval($value));
+		$this->attributes['cwid'] = intval($value));
 	}
 }
