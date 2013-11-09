@@ -12,12 +12,12 @@ class RegisterController extends BaseController{
 
 	private function registerUser(){
 		$rules = array(
-			'fname' => 'trim|required|min:1|max:45',
-			'lname' => 'trim|required|min:1|max:45',
-			'email' => 'trim|required|email|max:100',
-			'username' => 'trim|min:1|max:70',
-			'kaccount' => 'trim|between:5,5',
-			'cwid' => 'trim|required|integer|between:8,8',
+			'fname' => 'required|min:1|max:45',
+			'lname' => 'required|min:1|max:45',
+			'email' => 'required|email|max:100',
+			'username' => 'min:1|max:70',
+			'kaccount' => 'between:5,5',
+			'cwid' => 'required|integer|between:8,8',
 			'password' => 'required|between:6,22|same:vpassword'
 		);
 		
