@@ -11,7 +11,7 @@
 		Search by CWID: <input type='text' name='cwid' id='cwid' />
 		<input type='submit' name='submit' id='submit' value='Search' />
 	</form>
-	<form action='../logout' method='POST'>
+	<form action='/logout' method='POST'>
 		<input type='submit' name='submit' value='Log Out'>
 	</form>
 	@stop

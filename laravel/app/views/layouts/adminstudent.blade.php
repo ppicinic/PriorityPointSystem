@@ -89,7 +89,7 @@
 	<h4>Discipline Points: {{$discipline}}</h4>
 	<?php $totalPoints += $gpaPoints + $condition + $damage + $discipline; ?>
 	<h3>Total Points: {{$totalPoints}}</h3>
-	<form action='../logout' method='POST'>
+	<form action='/logout' method='POST'>
 		<input type='submit' name='submit' value='Log Out'>
 	</form>
 	@stop
